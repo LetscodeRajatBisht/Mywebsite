@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajat Bisht - Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <style>
+        /* Existing CSS code */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f2ef; /* Light background color */
+        }
+
+        .container {
+            max-width: 100%;
+            margin: auto;
+            padding: 5px;
+        }
+
+        header {
+            background-color: #0077b5; /* LinkedIn blue */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        a {
+            color: #0077b5; /* LinkedIn blue */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        .slideshow-container {
+            display: flex;
+            width: 100%;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            gap: 1px;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+
+        .news-item {
+            flex: 0 0 auto;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: calc(30% - 5px); /* Adjust width for 2 items */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100px; /* Decrease height */
+            scroll-snap-align: start;
+        }
+
+        .news-item img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .news-item h3, .news-item p {
+            margin: 5px 0;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .news-item h3 {
+            font-size: 14px;
+        }
+
+        .news-item p {
+            font-size: 16px;
+        }
+    
+
+        .recommendation {
+         
+            flex: 0 0 auto;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: calc(50% - 5px); /* Adjust width for 4 items */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100px; /* Minimum height */
+            scroll-snap-align: start;
+        }
+
+        .recommendation img {
+            max-width: 100px; /* Set the maximum width for the images */
+            height: auto; /* Maintain aspect ratio */
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .recommendation h3, .recommendation p {
+            margin: 5px 0;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .recommendation h3 {
+            font-size: 20px;
+        }
+
+        .recommendation p {
+            font-size: 20px;
+        }
+
+        /* New CSS code for LinkedIn link */
+        .linkedin-link {
+            color: #fff; /* White text */
+            text-decoration: none;
+        }
+
+        .linkedin-link:hover {
+            text-decoration: underline;
+        }
+        
+         .Git-link {
+            color: #fff; /* White text */
+            text-decoration: none;
+        }
+
+        .Git-link:hover {
+            text-decoration: underline;
+        }
+
+        .Cover_letter {
+            color: #fff; /* White text */
+            text-decoration: none;
+        }
+
+        .Cover_letter:hover {
+            text-decoration: underline;
+        }
+
+        .email-link {
+            color: #fff; /* White text */
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .phone-link {
+            color: #fff; /* White text */
+            text-decoration: none;
+        }
+
+        .phone-link:hover {
+            text-decoration: underline;
+        }
+
+        
+
+        
+
+        /* Responsive design adjustments */
+      @media (max-width: 768px) {
+            .container {
+                max-width: 45%; /* Adjust container size for smaller screens */
+            }
+            .news-item {
+                width: calc(100% - 10px); /* Adjust width for 1 item on smaller screens */
+            }
+            recommendation {
+                width: calc(80% - 10px); /* Adjust width for 2 items on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rajat Bisht</h1>  
+        <p><a href="mailto:rajatbisht1196@gmail.com" class="email-link" > Email: rajatbisht1196@gmail.com</a> | <a href="https://linkedin.com/in/hi-rajat-bisht/" class="linkedin-link"> LinkedIn: hi-rajat-bisht </a> | <a href="tel:+14436318663" class="phone-link" >Phone: 443-631-8663</a></p> 
+        <p> <a href="https://github.com/LetscodeRajatBisht/" class="Git-link"> Github: LetscodeRajatBisht</a>| <a href="https://makeportfolio.s3.amazonaws.com/coverletter.html" class="Cover_letter">Cover letter</a> </p>
+    </header>
+    <p></p>
+       <div class="container">
+        <section class="slideshow-container" id="newsList">
+            <!-- News items will be added here dynamically -->
+        </section>
+    </div>
+    
+         <div class="container">
+        <section class="slideshow-container" id="recommendations">
+            <!-- Recommendation items will be added here dynamically -->
+        </section>
+    </div>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="experience">
+
+		
+		<h3>IT Associate | HCL Tech</h3>
+                <p>Oct 2024 – Present | Dallas, USA</p>
+                <ul>
+                    <li>Responsible for troubleshooting system and device issues, managing incidents, and ensuring compliance with HIPAA regulations to safeguard Personally Identifiable Information (PII)</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Cyber Security Analyst Intern | Radiant Infotech LLC</h3>
+                <p>May 2023 – May 2024 | Maryland, USA</p>
+                <ul>
+                    <li>Assisted in IT audit and ensured compliance with FISMA, NIST 800:53 and CCPA</li>
+                    <li>Reviewed security controls, risk assessment reports, privacy impact assessment, contingency test plans</li>
+		    <li>Identified security gaps and areas of improvement while auditing IAM, access control, MFA, password policies,system backup, and vulnerability scan using DAST tool OWASP ZAP, Synack</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Cyber Security Developer Intern | Canfield CyberDefense Group</h3>
+                <p>Sep 2023 - Oct 2023 | Maryland, USA</p>
+                <ul>
+                    <li>Enhanced threat-hunting functionality by adding IP location visualization by integrating map via Python.</li>
+                    <li>Enhanced partner portal page and added single-user sign-up through MySQL, HTML and JavaScript.</li>
+                </ul>
+            </div>
+            </div>
+                <h3>Security Delivery Analyst | Accenture</h3>
+                <p>Dec 2018 – July 2022</p>
+                <ul>
+                    <li>SOC Analyst: Experience working as a L2 SOC Analyst in a Managed Shared Services team</li>
+                    <li>Demonstrated proficiency in EDR (CrowdStrike Falcon, Microsoft Defender), SIEM (Splunk), XDR (Cortex XDR, Darktrace), Packet analyzer (Wireshark), Cloud security (Akamai), Firewall (Palo Alto NGFW, Imperva WAF) tools</li>
+                    <li>Deployed security use case playbooks on Splunk Phantom (SOAR tool) to identify threats</li>
+                    <li>Extensive experience with Splunk for custom rule configuration and creating advanced queries</li>
+                    <li>Developed dynamic dashboards in Splunk to improve the mean time to respond (MTTR) by 30%</li>
+                    <li>Fine-tuned Splunk security use cases to reduce false positive alerts by 20%</li>
+                    <li>Performed IOC scans, and vulnerability scans using Nessus</li>
+                    <li>Worked in user access provisioning using Active Directory and Azure Active Directory</li>
+                    <li>GRC Analyst: Performed internal audits to identify gap in business and technical processes of clients</li>
+                    <li>Ensured compliance with ISO 27001 and PCI-DSS</li>
+                    <li>Worked as a GRC Analyst to perform Internal Audit and 3rd Party ISMS.</li>
+                    <li>Collaborated with stakeholders to gather information and scope of the assessment for ISRA</li>
+                    <li>Reviewed and assessed incident response plans, logging and monitoring activities, IAM policies, access control list, change management process and cryptographic controls to identify risk</li>
+		    <li>Ensured segregation of duties by identifying key applications and entitlements that allow users to execute the identified sensitive business transactions in an agreed toxics methodology framework</li>
+		    <li>Worked with risk registers to document risk finding and performed outreach and due diligence</li>
+
+                </ul>
+            </div>
+        </section>
+        
+
+    <section class="section">
+        <h2>Certifications</h2>
+        <p>ISO 27001: Lead Auditor, SC-200: Microsoft Security Operations Analyst, AZ-500: Azure Security</p>
+    </section>
+
+    <section class="section">
+        <h2>Education</h2>
+        <p>Masters in Cybersecurity, University of Maryland Baltimore County (Aug 2022 - May 2024)</p>
+        <p>Bachelor in Computer Science, Guru Gobind Singh Indraprastha University (Aug 2015 - May 2018)</p>
+        <p>Dilopma in Electrical Engineering, G B Pant Polytechnic (Aug 2012 - May 2015)</p>
+    </section>
+
+
+    <section class="section">
+        <h2>Personal Projects</h2> 
+        <div class="project">
+            <h3>Cyber Lab Deployment</h3>
+            <p>Deployed cyber lab with Kali Linux machine and Windows Server for Active Directory</p>
+            <p>Automated user creation with PowerShell in the server.</p>
+            <p>Deployed network firewall to detect DDOS attacks created using Python in Kali Linux.</p>
+            <p>Configured Splunk to get logs from Kali Linux in Windows server and show logs through visualization.</p>
+        </div>
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Using Flask, Python, AWS Services, HTML, CSS</p>
+        </div>
+        <div class="project">
+            <h3>Scripting for Pen-testing</h3>
+            <p>Port Scanner, IP Address and Phone Number location tracker with Maps integration</p>
+            <p>API Security and Container security of AWS, VPC using Terraform, AWS, Git</p>
+        </div>
+        <div class="project">
+            <h3>Failed Bank, Heat Attack, and Vehicle Collision in NYC data analysis</h3>
+            <p>Using Pandas, NumPy, Matplotlib, Seaborn</p>
+        </div>
+        <div class="project">   
+            <h3>Additional Cyber Skills</h3>
+            <p></p>
+            <p>Kali Linux, OWASP top 10, TryHackMe, Metasploit, CTF, Nmap, Reverse Shell, PKI, Thread Modelling:OWASP Thread Dragon </p>
+        </div>
+    </section>
+
+</div>
+    <script>
+        window.onload = function() {
+            // Fetch and display cybersecurity news
+            fetch('https://api.rss2json.com/v1/api.json?rss_url=https://feeds.feedburner.com/TheHackersNews')
+                .then(response => response.json())
+                .then(data => {
+                    const newsList = document.getElementById('newsList');
+                    const newsItems = data.items.slice(0, 20); // Limit to 4 items for slideshow
+                    newsItems.forEach(item => {
+                        const newsItem = document.createElement('div');
+                        newsItem.classList.add('news-item');
+                        newsItem.innerHTML = `
+                            <a href="${item.link}" target="_blank"> <!-- Add link to news item -->
+                                <img src="${item.enclosure.link}" alt="${item.title}">
+                                <h3>${item.title}</h3>
+                            </a>
+                        `;
+                        newsList.appendChild(newsItem);
+                    });
+
+                    // Function to slide news items
+                    function slideNews() {
+                        newsList.scrollLeft += newsList.offsetWidth;
+                        if (newsList.scrollLeft + newsList.offsetWidth >= newsList.scrollWidth) {
+                            newsList.scrollLeft = 0;
+                        }
+                    }
+
+                    setInterval(slideNews, 4000); // Adjust as needed
+                })
+                .catch(error => {
+                    console.error('Error fetching news:', error);
+                });
+            const recommendations = [
+                                {
+                    name: "Shraddha Verma",
+                    position: "Consultant at KPMG",
+                    description: "Rajat joined our team as a fresher but quickly became a reliable asset, demonstrating remarkable learning speed.",
+                    image: "https://makeportfolio.s3.amazonaws.com/shraddha.jpeg"
+                },
+                {
+                    name: "Lalit Kumar",
+                    position: "Cybersecurity Manager Wipro",
+                    description: "Rajat's grasping power and dedication towards his work were astounding from the start.",
+                    image: "https://makeportfolio.s3.amazonaws.com/lalit.jpeg"
+                },
+                {
+                    name: "Kanika Saini",
+                    position: "GRC Specialist at Xerox",
+                    description: "I have worked with Rajat in two different projects. He has always proved his presence as an excellent team player. Rajat is very organized and competent person with a very positive attitude towards his work.",
+                    image: "https://makeportfolio.s3.amazonaws.com/kanika.jpeg"
+                },
+                {
+                    name: "Mamta Sagar",
+                    position: "Compliance Program Manager at VMware ",
+                    description: "It’s rare that you come across standout talent like you. I was particularly impressed by Rajat’s ability to handle the toughest banking client during transition.",
+                    image: "https://makeportfolio.s3.amazonaws.com/mamta.jpeg"
+                },
+                {
+                    name: "Aashiq Hameed",
+                    position: "Professional Service Consultant - Palo-Alto Networks",
+                    description: "Rajat was one of the quick learners in my team and always showed keen interest in exploring new technologies and adapting them in his day to day SOC activities.",
+                    image: "https://makeportfolio.s3.amazonaws.com/aashiq.jpeg"
+                },
+                {
+                    name: "Pratul Singh",
+                    position: "Cyber Security Delivery Associate Manager at Accenture",
+                    description: "Rajat is very dedicated towards his work and he has the ability to learn and improve quickly which makes him a great asset.",
+                    image: "https://makeportfolio.s3.amazonaws.com/pratul.jpeg"
+                },
+                {
+                    name: "Achint Sharma",
+                    position: "Cybersecurity Manager Wipro",
+                    description: "I worked with Rajat in the same group during my association with Accenture. I find him very lively and a great professional to work with.",
+                    image: "https://makeportfolio.s3.amazonaws.com/achint.jpeg"
+                }
+                // Add other recommendations with image URLs
+            ];
+
+            const container = document.getElementById('recommendations');
+
+            recommendations.forEach(rec => {
+                let div = document.createElement('div');
+                div.classList.add('recommendation');
+                div.innerHTML = `
+                    <img src="${rec.image}" alt="${rec.name}">
+                    <h3>${rec.name}</h3>
+                    <p>${rec.position}</p>
+                    <p>${rec.description}</p>
+                `;
+                container.appendChild(div);
+            });
+
+            // Function to slide
+            function slide() {
+                container.scrollLeft += container.offsetWidth;
+                if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+                    container.scrollLeft = 0;
+                }
+            }
+
+            setInterval(slide, 3000); // Adjust as needed
+        };
+    </script>
+</body>
+</html>
